@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+    padding:20px;
+}
+
+.container{
+    width:750px;
+    max-width:100%;
+    background:#fff;
+    border-radius:18px;
+    padding:35px;
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+    animation:fadeIn .5s ease;
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.hide{
+    display:none;
+}
+
+/* Heading */
+
+h1{
+    text-align:center;
+    color:#1565c0;
+    margin-bottom:10px;
+    font-size:34px;
+}
+
+#datetime{
+    text-align:center;
+    color:#555;
+    margin-bottom:30px;
+    font-weight:500;
+    font-size:16px;
+}
+
+/* Login */
+
+.login-box{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+input,
+select{
+
+    width:100%;
+    padding:14px;
+    border:2px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+    transition:.3s;
+
+}
+
+input:focus,
+select:focus{
+
+    border-color:#2196f3;
+    outline:none;
+    box-shadow:0 0 10px rgba(33,150,243,.25);
+
+}
+
+button{
+
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#1565c0;
+    color:white;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#0d47a1;
+    transform:translateY(-2px);
+
+}
+
+button:active{
+
+    transform:scale(.98);
+
+}
+
+/* Header */
+
+.header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    background:#f5f7ff;
+    padding:14px 18px;
+    border-radius:10px;
+    margin-bottom:15px;
+    font-weight:600;
+
+}
+
+.second{
+
+    background:#fff4e5;
+
+}
+
+.header div{
+
+    margin:5px;
+
+}
+
+/* Question */
+
+.question-box{
+
+    margin-top:20px;
+
+}
+
+.question-box h2{
+
+    color:#222;
+    margin-bottom:25px;
+    line-height:1.5;
+
+}
+
+/* Options */
+
+.option{
+
+    padding:15px;
+    border:2px solid #ddd;
+    border-radius:10px;
+    margin-bottom:15px;
+    cursor:pointer;
+    transition:.3s;
+    background:white;
+    font-size:16px;
+
+}
+
+.option:hover{
+
+    background:#e3f2fd;
+    border-color:#2196f3;
+    transform:translateX(5px);
+
+}
+
+/* Selected Option */
+
+.selected{
+
+    background:#bdbdbd !important;
+    color:#000;
+    border-color:#757575;
+
+}
+
+/* Timer */
+
+#timer{
+
+    color:red;
+    font-size:22px;
+    font-weight:bold;
+    animation:blink 1s infinite;
+
+}
+
+@keyframes blink{
+
+50%{
+
+opacity:.5;
+
+}
+
+}
+
+/* Score */
+
+#score{
+
+    color:#2e7d32;
+    font-weight:bold;
+    font-size:20px;
+
+}
+
+/* Result */
+
+.result-card{
+
+    margin:30px 0;
+    background:#f9fafb;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
+
+}
+
+.result-card h2{
+
+    color:#1565c0;
+    margin-bottom:15px;
+
+}
+
+.result-card h3{
+
+    margin:12px 0;
+    color:#333;
+
+}
+
+.result-card p{
+
+    font-size:18px;
+    margin:10px 0;
+
+}
+
+#resultStatus{
+
+    margin-top:20px;
+    font-size:28px;
+    font-weight:bold;
+
+}
+
+/* Next Button */
+
+#nextBtn{
+
+    width:100%;
+    margin-top:20px;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.container{
+
+padding:25px;
+
+}
+
+.header{
+
+flex-direction:column;
+align-items:flex-start;
+
+}
+
+h1{
+
+font-size:28px;
+
+}
+
+.question-box h2{
+
+font-size:20px;
+
+}
+
+.option{
+
+font-size:15px;
+
+}
+
+button{
+
+font-size:16px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.container{
+
+padding:20px;
+
+}
+
+h1{
+
+font-size:24px;
+
+}
+
+#datetime{
+
+font-size:14px;
+
+}
+
+.option{
+
+padding:12px;
+
+}
+
+}

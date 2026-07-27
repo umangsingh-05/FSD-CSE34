@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="loginPage">
+
+        <h1>Online Quiz System</h1>
+
+        <p id="datetime"></p>
+
+        <div class="login-box">
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Enter Your Name"
+            >
+
+            <select id="domain">
+                <option value="technology">Technology</option>
+                <option value="zoology">Zoology</option>
+                <option value="world">World</option>
+                <option value="politics">Politics</option>
+            </select>
+
+            <button onclick="startQuiz()">Start Quiz</button>
+
+        </div>
+
+    </div>
+    <div class="container hide" id="quizPage">
+
+        <div class="header">
+
+            <div>
+                <strong>Name :</strong>
+                <span id="userDisplay"></span>
+            </div>
+
+            <div>
+                <strong>Domain :</strong>
+                <span id="domainDisplay"></span>
+            </div>
+
+            <div>
+                <strong>Question :</strong>
+                <span id="questionNo"></span>
+            </div>
+
+        </div>
+
+        <div class="header second">
+
+            <div>
+                ⏳ Time Left :
+                <span id="timer">10</span>s
+            </div>
+
+            <div>
+                Score :
+                <span id="score">0</span>
+            </div>
+
+        </div>
+
+        <div class="question-box">
+
+            <h2 id="question"></h2>
+
+            <div id="options">
+
+            </div>
+
+        </div>
+
+        <button id="nextBtn">
+            Next
+        </button>
+
+    </div>
+
+    <!-- Result Page -->
+
+    <div class="container hide" id="resultPage">
+
+        <h1>Quiz Completed</h1>
+
+        <div class="result-card">
+
+            <h2 id="resultName"></h2>
+
+            <p id="resultDomain"></p>
+
+            <h3 id="resultMarks"></h3>
+
+            <h3 id="resultPercentage"></h3>
+
+            <h2 id="resultStatus"></h2>
+
+        </div>
+
+        <button onclick="location.reload()">
+            Play Again
+        </button>
+
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
