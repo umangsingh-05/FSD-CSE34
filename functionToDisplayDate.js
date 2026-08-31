@@ -13,13 +13,14 @@
 // console.log(dateFormat.display("indian"));
 
 
-function requiredargs()
-{
-    throw new Error("Arggument is mandatory");
+function requiredargs() {
+    throw new Error("Argument is mandatory");
 }
-function display(a=requiredargs(),b=requiredargs())
-{
-    return a+b;
+
+function display(a = requiredargs(), b = requiredargs()) {
+    return a + b;
 }
-console.log(dispaly(10,20));
+
+console.log(display(10, 20));
 console.log(display());
+
